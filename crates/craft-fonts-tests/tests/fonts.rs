@@ -215,3 +215,18 @@ fn thai_fonts_cover_thai_text() {
         ),
     );
 }
+
+#[test]
+fn korean_fonts_cover_korean_text() {
+    covers(
+        "Kore",
+        concat!(
+            // Hangul syllables used in common UI vocabulary (file, edit, view, layer, document,
+            // save, open, close, undo, redo, copy, paste, delete, select, export, settings).
+            "파일편집보기레이어문서저장열기닫기실행취소다시복사붙여넣기삭제선택내보내기설정",
+            "한글가나다라마바사아자차카타파하",
+            "，。、：；？！（）",
+            "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+        ),
+    );
+}
